@@ -1,0 +1,19 @@
+version: "3"
+services:
+    app:
+        image: lapis:1.12.0-1
+        container_name: app
+        restart: unless-stopped
+        env_file: .env
+        working_dir: /app
+        command: lapis server
+        volumes:
+            - ./src:/app
+            - ./logs:/var/log/openresty/
+            - openresty_tmp:/tmp/openresty
+        ports:
+            - 9090:8080
+
+volumes:
+    openresty_tmp:
+    # openresty_logs:

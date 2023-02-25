@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  command: sleep infinity
+  volumes:
+    - ../:/workspace:cached
+
+  networks:
+    - internal_network
+    - external_network
+
+networks:
+  # internal_network:
+    # internal: true
+  external_network:
