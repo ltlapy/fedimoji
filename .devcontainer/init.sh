@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p /tmp/openresty/nginx-client-body
+mkdir -p /var/log/openresty
+
 set -xe
 
 luarocks install luasec
