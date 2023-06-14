@@ -1,4 +1,5 @@
-FROM lapis:1.12.0-1
+FROM ghcr.io/ltlapy/docker-lapis:amd64
+# FROM ghcr.io/ltlapy/docker-lapis:arm64
 
 # Set Persistent Deps
 ENV BUILD_DEPS \
